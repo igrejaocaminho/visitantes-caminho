@@ -24,3 +24,65 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+#main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 450px;
+  background-color: #0f0f0f !important;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.01);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#main-form form input {
+  margin: 12px 0 !important;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#main-form p,
+#main-form .titulo {
+  text-align: center !important;
+  margin-bottom: 16px;
+  color: gray;
+  word-break: break-word;
+}
+
+#main-form .titulo{
+  margin-top: 10px !important;
+  font-size: 22px !important;
+  color: rgb(170, 170, 170) !important;
+}
+
+.o_caminho_titulo{
+  margin: 8px 0px !important;
+  padding: 5px 0px 10px 0px !important;
+  font-size: 24px !important;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(44, 44, 44) !important;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 360px) {
+  #main-form {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  #main-form form input {
+    font-size: 0.95rem;
+  }
+
+  #main-form h1 {
+    font-size: 1.25rem;
+  }
+}
