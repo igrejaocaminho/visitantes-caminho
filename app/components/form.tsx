@@ -85,7 +85,7 @@ export default function CadastroForm() {
           {/* Sexo - dropdown */}
           <select
             className={`w-full p-2 border rounded ${form.sexo === '' ? 'color-gray-general' : 'text-white'}`} name="sexo" value={form.sexo} onChange={handleChange} required>
-            <option value="">Selecione o sexo</option>
+            <option value="" disabled hidden>Selecione o gênero</option>
             <option value="2094452">Homem</option>
             <option value="2094453">Mulher</option>
           </select>
