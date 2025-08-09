@@ -49,6 +49,8 @@ export async function POST(request: Request) {
     if (data.sexo) tags.push(data.sexo);
     if (data.idade) tags.push(data.idade);
     if (data.culto_visita) tags.push(data.culto_visita);
+    if (data.qtd_visita) tags.push(data.qtd_visita);
+
 
     for (const tagId of tags) {
       const tagResponse = await fetch(`${API_BASE}/subscriber/${subscriberId}/tags/${tagId}/`, {

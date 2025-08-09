@@ -11,6 +11,7 @@ export default function CadastroForm() {
     sexo: '',
     idade: '',
     culto_visita: '',
+    qtd_visita: ''
   });
 
   const [mensagem, setMensagem] = useState('');
@@ -31,7 +32,8 @@ export default function CadastroForm() {
       !form.last_name.trim() ||
       !form.sexo ||
       !form.idade ||
-      !form.culto_visita
+      !form.culto_visita ||
+      !form.qtd_visita
     ) {
       setMensagem('Por favor, preencha todos os campos antes de enviar.');
       return;
@@ -64,6 +66,7 @@ export default function CadastroForm() {
         sexo: '',
         idade: '',
         culto_visita: '',
+        qtd_visita: '',
       });
     } catch (err: any) {
       setMensagem(`Erro: ${err.message}`);
@@ -112,6 +115,14 @@ export default function CadastroForm() {
             <option value="15283990">Célula Peniel</option>
             <option value="15283991">Célula Renovação</option>
             <option value="15283987">Célula Ágape</option>
+          </select>
+
+           {/* Culto visita - dropdown */}
+          <select className={`w-full p-2 border rounded ${form.qtd_visita === '' ? 'color-gray-general' : 'text-white'}`} name="qtd_visita" value={form.qtd_visita} onChange={handleChange} required>
+            <option value="" disabled hidden>Selecione a visita</option>
+            <option value="15285745">1 visita</option>
+            <option value="15285746">2 visita</option>
+            <option value="15285747">3 visita</option>
           </select>
 
           <button type="submit" className="block mt-[20px] mx-auto bg-blue-600 text-white px-4 py-2 rounded hover:scale-105 transition-transform duration-200 ease-in-out">Enviar informações</button>
