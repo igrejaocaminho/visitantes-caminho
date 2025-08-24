@@ -99,9 +99,9 @@ export default function CadastroForm() {
             <option value="15283994">0 a 10 anos</option>
             <option value="15283997">11 a 14 anos</option>
             <option value="15283998">15 a 18 anos</option>
-            <option value="15283999">18 a 35 anos</option>
-            <option value="15284000">36 a 60 anos</option>
-            <option value="15285696">61+ anos</option>
+            <option value="15284000">18 a 35 anos</option>
+            <option value="15285696">36 a 60 anos</option>
+            <option value="15285697">61+ anos</option>
 
           </select>
 
