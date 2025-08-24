@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
     // 3. Enviar etiquetas (tags)
 
-    const tags = [];
+    const tags = [15407601];
 
     if (data.sexo) tags.push(data.sexo);
     if (data.idade) tags.push(data.idade);
