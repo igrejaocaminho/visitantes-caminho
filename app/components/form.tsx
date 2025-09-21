@@ -26,6 +26,8 @@ export default function CadastroForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+  const phoneComPrefixo = form.phone.startsWith("55") ? form.phone : "55" + form.phone;
+
     if (
       !form.phone.trim() ||
       !form.first_name.trim() ||
@@ -48,7 +50,7 @@ export default function CadastroForm() {
       const response = await fetch('/api/cadastrar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({...form, phone: phoneComPrefixo}),
       });
 
       const data = await response.json();
